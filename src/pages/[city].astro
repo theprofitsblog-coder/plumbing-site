@@ -10,3 +10,33 @@ export async function getStaticPaths() {
 
 const { city } = Astro.props;
 ---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Plumbing Services in {city.cityName}, {city.stateCode}</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f9; color: #333; }
+        .container { max-width: 800px; margin: 50px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        h1 { color: #0056b3; }
+        .cta-btn { display: inline-block; background: #ff5722; color: #fff; padding: 12px 25px; text-decoration: none; font-size: 20px; font-weight: bold; border-radius: 5px; margin-top: 20px; }
+        .info { margin-top: 20px; font-size: 14px; color: #666; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>24/7 Emergency Plumbing Services in {city.cityName}, {city.stateCode}</h1>
+        <p>Need a reliable plumber in <strong>{city.cityName}, {city.stateName}</strong>? We offer top-rated, fast, and affordable plumbing solutions near you. From leak detection to water heater repair, our expert team is ready to help!</p>
+        
+        <a href="tel:+18005550199" class="cta-btn">📞 Call Now: (800) 555-0199</a>
+        
+        <div class="info">
+            <p>Serving Location: {city.cityName} | State: {city.stateName} ({city.stateCode}) | Zip Code: {city.zipCode}</p>
+        </div>
+    </div>
+
+</body>
+</html>
